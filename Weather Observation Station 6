@@ -1,0 +1,32 @@
+Question:-
+-------------
+Query the list of CITY names starting with vowels (i.e., a, e, i, o, or u) from STATION. Your result cannot contain duplicates.
+
+Solution:-
+-------------
+
+Description:-
+---------------
+Use of regular expression to check the first letter of words and filtering the words starting with voweles
+---------------------------------------------------------------------------------------------------------------------------------------
+Basic syntax:-
+The basic syntax for a regular expression is as follows
+
+SELECT statements... WHERE fieldname REGEXP 'pattern';
+HERE -
+
+"SELECT statements..." is the standard SELECT statement
+"WHERE fieldname" is the name of the column on which the regular expression is to be performed on.
+"REGEXP 'pattern'" REGEXP is the regular expression operator and 'pattern' represents the pattern to be matched by REGEXP. RLIKE is the synonym for REGEXP and achieves the same results as REGEXP. To avoid confusing it with the LIKE operator, it better to use REGEXP instead.
+
+Info from :-https://www.guru99.com/regular-expressions.html
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Sql Query:-
+
+SELECT DISTINCT CITY FROM STATION
+WHERE CITY REGEXP '^[aeiou]';
+
+REGEXP '^[aeiou]'; for vowels count
+
+Thanks
